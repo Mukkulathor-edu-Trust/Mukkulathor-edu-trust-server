@@ -1,0 +1,22 @@
+# Django
+*.pyc
+__pycache__/
+*.log
+
+# Environment
+.env
+.venv/
+venv/
+env/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+
+# Static/media files (optional if generated)
+staticfiles/
+media/
