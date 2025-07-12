@@ -1,4 +1,5 @@
 from django.db import models
+from .fields import EncryptedCharField
 
 class Student(models.Model):
     # Personal Information
@@ -10,7 +11,8 @@ class Student(models.Model):
     parent_contact = models.CharField(max_length=15, blank=True, null=True)
     email = models.EmailField(blank=True, null=True)
     address = models.TextField(blank=True, null=True)
-    aadhar_number = models.CharField(max_length=20, unique=True, blank=True, null=True)
+    # aadhar_number = models.CharField(max_length=20, unique=True, blank=True, null=True)
+    aadhar_number = EncryptedCharField(max_length=200, unique=True, blank=True, null=True)
     aadhar_photo = models.TextField(blank=True, null=True)
 
     # Academic Details
